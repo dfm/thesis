@@ -53,23 +53,27 @@
 \thispagestyle{empty}
 %
 \begin{center}
-  {\large\textbf{\thesistitle}}
-  \vspace{.7in}
 
-  by
-  \vspace{.7in}
 
-  \thesisauthor
-  \vfill
+    \vspace*{-1in}
+    {\large\textbf{\thesistitle}}
+    \vspace{.4in}
 
-\begin{doublespace}
-  A dissertation submitted in partial fulfillment\\
-  of the requirements for the degree of\\
-  Doctor of Philosophy\\
-  Department of Physics\\
-  New York University\\
-  \graddate
-\end{doublespace}
+    by
+    \vspace{.4in}
+
+    \thesisauthor{}
+    \vspace{.8in}
+    % \vfill
+
+    \begin{doublespace}
+        A dissertation submitted in partial fulfillment \\
+        of the requirements for the degree of \\
+        Doctor of Philosophy \\
+        Department of Physics \\
+        New York University \\
+        \graddate{}
+    \end{doublespace}
 \end{center}
 \vfill
 
@@ -98,10 +102,12 @@
 \section*{Acknowledgements}\addcontentsline{toc}{section}{Acknowledgements}
 \input{acknowledge}
 \newpage
+
 %%%% Abstract %%%%%%%%%%%%%%%%%%
 \section*{Abstract}\addcontentsline{toc}{section}{Abstract}
 \input{abstract}
 \newpage
+
 %%%% Table of Contents %%%%%%%%%%%%
 \tableofcontents
 
@@ -120,29 +126,31 @@
 \newpage
 
 %%%%% Body of thesis starts %%%%%%%%%%%%
-\pagenumbering{arabic} % switches page numbering to arabic: 1, 2, 3, etc.
+\pagenumbering{arabic}
+
 %% Introduction. If your thesis has no introduction, or chapter 1 is
 %% meant to be the introduction, then comment out the lines below.
 \section*{Introduction}\addcontentsline{toc}{section}{Introduction}
 \input{intro}
-%% If your thesis has different "Parts", use commands such as the following:
-%\part{First Part\label{part:one}}%
-\input{chap1}
+
+\input{chap1-emcee}
 %\input{chap2} % further chapters -- change file names to meaningful things...
 %\input{chap3}
 %\part{Second Part\label{part:two}}%
 %\input{chap4}
 %\input{chap5}
 %\input{chap6}
-%%%%% Appendices start %%%%%%%%%%%%%%%%
-%% Comment out the following line if your thesis has no appendix
-\appendix
-\input{app1}
-%% Note: If your thesis has more than one appendix, NYU requires a "list of
-%% appendices" page before the body of the thesis. I don't provide the tools
-%% to create that here, so you're on your own for that one... Sorry.
-%\input{app2}
-%%%% Input bibliography file %%%%%%%%%%%%%%%
+
+% %%%%% Appendices start %%%%%%%%%%%%%%%%
+% %% Comment out the following line if your thesis has no appendix
+% \appendix
+% \input{app1}
+% %% Note: If your thesis has more than one appendix, NYU requires a "list of
+% %% appendices" page before the body of the thesis. I don't provide the tools
+% %% to create that here, so you're on your own for that one... Sorry.
+% %\input{app2}
+
+%%%% Bibliography %%%%%%%%%%%%%%%
 \input{biblio}
 
 \end{document}
