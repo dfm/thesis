@@ -7,7 +7,7 @@ CHECK_RERUN =
 
 all: thesis.pdf
 
-thesis.pdf: *.tex *.bib
+thesis.pdf: *.tex chapters/*.tex *.bib
 	${LATEX} thesis
 	bibtex thesis
 	${LATEX} thesis
