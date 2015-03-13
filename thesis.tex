@@ -38,13 +38,12 @@
 %% This inputs your auxiliary file with \usepackage's and \newcommand's:
 %% It is assumed that that file is called "definitions.tex".
 \input{definitions}
-\usepackage{layout}
 
 \begin{document}
 
 %% Produces a test "layout" page, for "debugging" purposes only.
 %% Comment out for final version.
-\layout  % requires package layout (see above, on this same file)
+% \layout  % requires package layout (see above, on this same file)
 
 %%%%%% Title page %%%%%%%%%%%
 %% Sets page numbering to "roman style" i, ii, iii, iv, etc:
@@ -56,7 +55,7 @@
 \begin{center}
 
 
-    \vspace*{-1in}
+    \vspace*{0.5in}
     {\large\textbf{\thesistitle}}
     \vspace{.4in}
 
@@ -136,12 +135,6 @@
 
 \input{chapters/emcee}
 \input{chapters/exopop}
-
-%\input{chap3}
-%\part{Second Part\label{part:two}}%
-%\input{chap4}
-%\input{chap5}
-%\input{chap6}
 
 % %%%%% Appendices start %%%%%%%%%%%%%%%%
 % %% Comment out the following line if your thesis has no appendix
