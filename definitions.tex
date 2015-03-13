@@ -16,23 +16,53 @@
 \usepackage{aas_macros}
 
 % Bibliography:
-% \usepackage[nottoc,numbib]{tocbibind}
 \usepackage{natbib}
 \bibliographystyle{apj}
 
-%%
-%% Place here your \newcommand's and \renewcommand's. Some examples already included.
-%%
-\renewcommand{\le}{\leqslant}
-\renewcommand{\ge}{\geqslant}
-\renewcommand{\emptyset}{\ensuremath{\varnothing}}
-\newcommand{\ds}{\displaystyle}
-\newcommand{\R}{\ensuremath{\mathbb{R}}}
-\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
-\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
-\newcommand{\N}{\ensuremath{\mathbb{N}}}
-\newcommand{\T}{\ensuremath{\mathbb{T}}}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\closure}[1]{\ensuremath{\overline{#1}}}
-%\newcommand{\acim}{\textsc{acim}\xspace}
-%\newcommand{\acims}{\textsc{acim}s\xspace}
+% Algorithms:
+\usepackage{algorithmic,algorithm}
+
+% Commands:
+
+% General formatting:
+\newcommand{\paper}{Chapter}
+
+% Foreign text:
+\newcommand{\foreign}[1]{\emph{#1}}
+\newcommand{\etal}{\foreign{et\,al.}}
+\newcommand{\etc}{\foreign{etc.}}
+
+% Project references:
+\newcommand{\project}[1]{{\textsl{#1}}}
+
+% LaTeX object referencing:
+\newcommand{\Fig}[1]{Figure~\ref{fig:#1}}
+\newcommand{\fig}[1]{\Fig{#1}}
+\newcommand{\figlabel}[1]{\label{fig:#1}}
+\newcommand{\Tab}[1]{Table~\ref{tab:#1}}
+\newcommand{\tab}[1]{\Tab{#1}}
+\newcommand{\tablabel}[1]{\label{tab:#1}}
+\newcommand{\Eq}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\eq}[1]{\Eq{#1}}
+\newcommand{\eqlabel}[1]{\label{eq:#1}}
+\newcommand{\Sect}[1]{Section~\ref{sect:#1}}
+\newcommand{\sect}[1]{\Sect{#1}}
+\newcommand{\App}[1]{Appendix~\ref{sect:#1}}
+\newcommand{\app}[1]{\App{#1}}
+\newcommand{\sectlabel}[1]{\label{sect:#1}}
+\newcommand{\Algo}[1]{Algorithm~\ref{algo:#1}}
+\newcommand{\algo}[1]{\Algo{#1}}
+\newcommand{\algolabel}[1]{\label{algo:#1}}
+
+% Math:
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\bvec}[1]{\boldsymbol{#1}}
+\newcommand{\paramvector}[1]{\bvec{#1}}
+\newcommand{\unit}[1]{\mathrm{#1}}
+
+% Probabilities:
+\newcommand{\like}{\mathscr{L}}
+\newcommand{\pr}[1]{\ensuremath{p(#1)}}
+\newcommand{\af}{\ensuremath{a_f}}
+\newcommand{\expect}[1]{\left<#1\right>}
+\newcommand{\normal}[2]{\mathcal{N} (#1, #2)}
