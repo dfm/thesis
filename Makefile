@@ -2,15 +2,15 @@ LATEX       = pdflatex
 BASH        = bash -c
 ECHO        = echo
 RM          = rm -rf
-TMP_SUFFS   = pdf aux bbl blg log dvi ps eps out
+TMP_SUFFS   = pdf aux bbl blg log dvi ps eps out toc lof lot
 CHECK_RERUN =
 
 all: thesis.pdf
 
 thesis.pdf: *.tex
 	${LATEX} thesis
-	# bibtex ${NAME}
-	# ${LATEX} thesis
+	bibtex thesis
+	${LATEX} thesis
 	( grep Rerun thesis.log && ${LATEX} thesis ) || echo "Done."
 	( grep Rerun thesis.log && ${LATEX} thesis ) || echo "Done."
 

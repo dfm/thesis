@@ -1,29 +1,24 @@
-%%
-%% Place here your \usepackage's. Some recommended packages are already included.
-%%
-
-% Graphics:
 \usepackage[final]{graphicx}
-%\usepackage{graphicx} % use this line instead of the above to suppress graphics in draft copies
-%\usepackage{graphpap} % \defines the \graphpaper command
 
-% Indent first line of each section:
+\usepackage{color,hyperref}
+\definecolor{linkcolor}{rgb}{0,0,0.2}
+\hypersetup{colorlinks=true,linkcolor=linkcolor,citecolor=linkcolor,
+            filecolor=linkcolor,urlcolor=linkcolor}
+
 \usepackage{indentfirst}
-
-% Good AMS stuff:
-\usepackage{amsthm} % facilities for theorem-like environments
-\usepackage[tbtags]{amsmath} % a lot of good stuff!
-
-% Fonts and symbols:
+\usepackage[tbtags]{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{url}
 
-% Formatting tools:
-%\usepackage{relsize} % relative font size selection, provides commands \textsmalle, \textlarger
-%\usepackage{xspace} % gentle spacing in macros, such as \newcommand{\acims}{\textsc{acim}s\xspace}
+% Custom AAS macros:
+\usepackage{aas_macros}
 
-% Page formatting utility:
-%\usepackage{geometry}
+% Bibliography:
+% \usepackage[nottoc,numbib]{tocbibind}
+\usepackage{natbib}
+\bibliographystyle{apj}
 
 %%
 %% Place here your \newcommand's and \renewcommand's. Some examples already included.
@@ -41,26 +36,3 @@
 \newcommand{\closure}[1]{\ensuremath{\overline{#1}}}
 %\newcommand{\acim}{\textsc{acim}\xspace}
 %\newcommand{\acims}{\textsc{acim}s\xspace}
-
-%%
-%% Place here your \newtheorem's:
-%%
-
-%% Some examples commented out below. Create your own or use these...
-%%%%%%%%%\swapnumbers % this makes the numbers appear before the statement name.
-%\theoremstyle{plain}
-%\newtheorem{thm}{Theorem}[chapter]
-%\newtheorem{prop}[thm]{Proposition}
-%\newtheorem{lemma}[thm]{Lemma}
-%\newtheorem{cor}[thm]{Corollary}
-
-%\theoremstyle{definition}
-%\newtheorem{define}{Definition}[chapter]
-
-%\theoremstyle{remark}
-%\newtheorem*{rmk*}{Remark}
-%\newtheorem*{rmks*}{Remarks}
-
-%% This defines the "proo" environment, which is the same as proof, but
-%% with "Proof:" instead of "Proof.". I prefer the former.
-%\newenvironment{proo}{\begin{proof}[Proof:]}{\end{proof}}

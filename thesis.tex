@@ -1,20 +1,16 @@
-%% NYU PhD thesis format. Created by José Koiller 2007--2008.
+% Based on format by José Koiller
 
 %% Use the first of the following lines during production to
 %% easily spot "overfull boxes" in the output. Use the second
 %% line for the final version.
-%\documentclass[12pt,draft,letterpaper]{report}
-\documentclass[12pt,letterpaper]{report}
+\documentclass[12pt,draft,letterpaper]{report}
+% \documentclass[12pt,letterpaper]{report}
 
-%% Replace the title, name, advisor name, graduation date and dedication below with
-%% your own. Graduation months must be January, May or September.
-\newcommand{\thesistitle}{Proof of the Riemann Hypothesis}
-\newcommand{\thesisauthor}{Jane Doe}
-\newcommand{\thesisadvisor}{Professor Fulana de Tal}
-\newcommand{\graddate}{May 2032}
-%% If you do not want a dedication, scroll down and comment out
-%% the appropriate lines in this file.
-\newcommand{\thesisdedication}{To my dog Weierstra\ss, with affection.}
+\newcommand{\thesistitle}{Methods for the detection and charactization \\
+                          of exoplanets and their population}
+\newcommand{\thesisauthor}{Daniel Foreman-Mackey}
+\newcommand{\thesisadvisor}{Professor David W. Hogg}
+\newcommand{\graddate}{May 2015}
 
 %% The following makes chapters and sections, but not subsections,
 %% appear in the TOC (table of contents). Increase to 2 or 3 to
@@ -27,49 +23,27 @@
 \setcounter{secnumdepth}{3}
 
 %% Page layout (customized to letter paper and NYU requirements):
-\setlength{\oddsidemargin}{.6in}
-\setlength{\textwidth}{5.8in}
-\setlength{\topmargin}{.1in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
 \setlength{\headheight}{0in}
 \setlength{\headsep}{0in}
 \setlength{\textheight}{8.3in}
 \setlength{\footskip}{.5in}
 
-%% Use the following commands, if desired, during production.
-%% Comment them out for final version.
-%\usepackage{layout} % defines the \layout command, see below
-%\setlength{\hoffset}{-.75in} % creates a large right margin for notes and \showlabels
-
-%% Controls spacing between lines (\doublespacing, \onehalfspacing, etc.):
 \usepackage{setspace}
-
-%% Use the line below for official NYU version, which requires
-%% double line spacing. For all other uses, this is unnecessary,
-%% so the line can be commented out.
-\doublespacing % requires package setspace, invoked above
-
-%% Each of the following lines defines the \com command, which produces
-%% a comment (notes for yourself, for instance) in the output file.
-%% Example:    \com{this will appear as a comment in the output}
-%% Choose (uncomment) only one of the three forms:
-%\newcommand{\com}[1]{[/// {#1} ///]}       % between [/// and ///].
-\newcommand{\com}[1]{\marginpar{\tiny #1}} % as (tiny) margin notes
-%\newcommand{\com}[1]{}                     % suppress all comments.
+\doublespacing{}
 
 %% This inputs your auxiliary file with \usepackage's and \newcommand's:
 %% It is assumed that that file is called "definitions.tex".
 \input{definitions}
-
-%% Cross-referencing utilities. Use one or the other--whichever you prefer--
-%% but comment out both lines for final version.
-%\usepackage{showlabels}
-%\usepackage{showkeys}
-
+\usepackage{layout}
 
 \begin{document}
+
 %% Produces a test "layout" page, for "debugging" purposes only.
 %% Comment out for final version.
-%\layout % requires package layout (see above, on this same file)
+\layout  % requires package layout (see above, on this same file)
 
 %%%%%% Title page %%%%%%%%%%%
 %% Sets page numbering to "roman style" i, ii, iii, iv, etc:
@@ -92,7 +66,7 @@
   A dissertation submitted in partial fulfillment\\
   of the requirements for the degree of\\
   Doctor of Philosophy\\
-  Department of Mathematics\\
+  Department of Physics\\
   New York University\\
   \graddate
 \end{doublespace}
@@ -102,20 +76,22 @@
 \noindent\makebox[\textwidth]{\hfill\makebox[2.5in]{\hrulefill}}\\
 \makebox[\textwidth]{\hfill\makebox[2.5in]{\hfill\thesisadvisor\hfill}}
 \newpage
+
+%%%%%%%%%%%%%% Copyright %%%%%%%%%%%%%%%%%
+\vspace*{\fill}
+\begin{center}
+    \textcopyright\ Daniel Foreman-Mackey\\
+    All rights reserved, 2015
+    \addcontentsline{toc}{section}{Copyright}
+\end{center}
+\vfill
+\newpage
+
 %%%%%%%%%%%%% Blank page %%%%%%%%%%%%%%%%%%
 \thispagestyle{empty}
 \vspace*{0in}
 \newpage
 
-%%%%%%%%%%%%%% Dedication %%%%%%%%%%%%%%%%%
-%% Comment out the following lines if you do not want to dedicate
-%% this to anyone...
-\vspace*{\fill}
-\begin{center}
-  \thesisdedication\addcontentsline{toc}{section}{Dedication}
-\end{center}
-\vfill
-\newpage
 %%%%%%%%%%%%%% Acknowledgements %%%%%%%%%%%%
 %% Comment out the following lines if you do not want to acknowledge
 %% anyone's help...
