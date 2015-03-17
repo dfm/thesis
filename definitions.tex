@@ -1,9 +1,10 @@
 \usepackage[final]{graphicx}
 
-\usepackage{color,hyperref}
+\usepackage{color, hyperref}
 \definecolor{linkcolor}{rgb}{0,0,0.2}
 \hypersetup{colorlinks=true,linkcolor=linkcolor,citecolor=linkcolor,
             filecolor=linkcolor,urlcolor=linkcolor}
+\hypersetup{pageanchor=false}
 
 \usepackage{indentfirst}
 \usepackage[tbtags]{amsmath}
@@ -38,30 +39,32 @@
 \newcommand{\terra}{\project{TERRA}}
 
 % LaTeX object referencing:
-\newcommand{\figref}[1]{\ref{fig:#1}}
+\newcommand{\chapid}{no chapter}
+\newcommand{\figref}[1]{\ref{\chapid:fig:#1}}
 \newcommand{\Fig}[1]{Figure~\figref{#1}}
 \newcommand{\fig}[1]{\Fig{#1}}
-\newcommand{\figlabel}[1]{\label{fig:#1}}
-\newcommand{\Tab}[1]{Table~\ref{tab:#1}}
+\newcommand{\figlabel}[1]{\label{\chapid:fig:#1}}
+\newcommand{\Tab}[1]{Table~\ref{\chapid:tab:#1}}
 \newcommand{\tab}[1]{\Tab{#1}}
-\newcommand{\tablabel}[1]{\label{tab:#1}}
-\newcommand{\Eq}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\tablabel}[1]{\label{\chapid:tab:#1}}
+\newcommand{\Eq}[1]{Equation~(\ref{\chapid:eq:#1})}
 \newcommand{\eq}[1]{\Eq{#1}}
-\newcommand{\eqalt}[1]{Equation~\ref{eq:#1}}
-\newcommand{\eqlabel}[1]{\label{eq:#1}}
-\newcommand{\Sect}[1]{Section~\ref{sect:#1}}
+\newcommand{\eqalt}[1]{Equation~\ref{\chapid:eq:#1}}
+\newcommand{\eqlabel}[1]{\label{\chapid:eq:#1}}
+\newcommand{\sectionname}{Section}
+\newcommand{\Sect}[1]{\sectionname~\ref{\chapid:sect:#1}}
 \newcommand{\sect}[1]{\Sect{#1}}
-\newcommand{\sectalt}[1]{\ref{sect:#1}}
-\newcommand{\App}[1]{Appendix~\ref{sect:#1}}
+\newcommand{\sectalt}[1]{\ref{\chapid:sect:#1}}
+\newcommand{\App}[1]{Appendix~\ref{\chapid:sect:#1}}
 \newcommand{\app}[1]{\App{#1}}
-\newcommand{\sectlabel}[1]{\label{sect:#1}}
-\newcommand{\Algo}[1]{Algorithm~\ref{algo:#1}}
+\newcommand{\sectlabel}[1]{\label{\chapid:sect:#1}}
+\newcommand{\Algo}[1]{Algorithm~\ref{\chapid:algo:#1}}
 \newcommand{\algo}[1]{\Algo{#1}}
-\newcommand{\algolabel}[1]{\label{algo:#1}}
+\newcommand{\algolabel}[1]{\label{\chapid:algo:#1}}
 
 % Math:
 \newcommand{\dd}{\mathrm{d}}
-\newcommand{\bvec}[1]{\boldsymbol{#1}}
+\newcommand{\bvec}[1]{{\ensuremath{\boldsymbol{#1}}}}
 \newcommand{\paramvector}[1]{\bvec{#1}}
 \newcommand{\unit}[1]{\mathrm{#1}}
 

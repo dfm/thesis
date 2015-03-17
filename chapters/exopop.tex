@@ -1,3 +1,5 @@
+\renewcommand{\chapid}{exopop}
+
 \newcommand{\True}{\foreign{True}}
 \newcommand{\Truth}{\foreign{Truth}}
 
@@ -28,12 +30,16 @@
 \newcommand{\resultsurl}{\url{http://dx.doi.org/10.5281/zenodo.11507}}
 
 
+\makeatletter
+\renewcommand{\@makefnmark}{\hbox{\textsuperscript{\footnotesize{\@thefnmark}}}}
+\makeatother
+
 \chapter{Exoplanet population inference and the abundance
          of Earth analogs from noisy, incomplete catalogs}
 
-This \paper\ was previously published in \emph{The Astrophysical Journal}
-(2014; Volume 795) with co-authors David~W.~Hogg (NYU) and Timothy~D.~Morton
-(Princeton).
+This \paper\ is joint work with David~W.~Hogg (NYU) and Timothy~D.~Morton
+(Princeton) published in \emph{The Astrophysical Journal} as
+\citet{Foreman-Mackey:2014}.
 
 \section{Chapter Abstract}
 
@@ -786,7 +792,7 @@ have more small-scale structure than the true underlying distribution.
 \begin{center}
 \includegraphics[width=\textwidth]{figures/exopop/smooth/results.pdf}
 \end{center}
-\caption{%
+\caption[The inferred planet population for the simulated catalog \modela]{%
 {\bf Simulated data}.
 Inferences about the rate density based on the simulated catalog \modela.
 \emph{Center:} the points with error bars show the exoplanet candidates in the
@@ -804,7 +810,7 @@ samples from the marginalized rate density as inferred by our method.
 \begin{center}
 \includegraphics[width=\textwidth]{figures/exopop/simulation/results.pdf}
 \end{center}
-\caption{%
+\caption[The inferred planet population for the simulated catalog \modelb]{%
 {\bf Simulated data}.
 The same as \fig{smooth-results} for \modelb.
 \figlabel{simulation-results}}
@@ -907,7 +913,7 @@ be.
 \begin{center}
 \includegraphics[width=0.8\textwidth]{figures/exopop/smooth/rate.pdf}
 \end{center}
-\caption{%
+\caption[The inferred rate of Earth analogs for the simulated catalog \modela]{%
 {\bf Simulated data}.
 The extrapolated rate density of Earth analogs \gammaearth\ as inferred by the
 different techniques applied to the \modela\ simulation.
@@ -922,7 +928,7 @@ density and the true value is indicated as the thick gray vertical line.
 \begin{center}
 \includegraphics[width=0.8\textwidth]{figures/exopop/simulation/rate.pdf}
 \end{center}
-\caption{%
+\caption[The inferred rate of Earth analogs for the simulated catalog \modelb]{%
 {\bf Simulated data}.
 The same as \fig{smooth-rate} for \modelb.
 \figlabel{simulation-rate}}
@@ -1031,7 +1037,7 @@ online\footnote{\resultsurl}.
 \begin{center}
 \includegraphics[width=\textwidth]{figures/exopop/results/results.pdf}
 \end{center}
-\caption{%
+\caption[The population of exoplanets]{%
 {\bf Real data}.
 The same as \fig{smooth-results} when applied to the observed data from
 \citet{Petigura:2013}.
@@ -1048,7 +1054,7 @@ samples from the marginalized rate density as inferred by our method.
 \begin{center}
 \includegraphics{figures/exopop/results/period.pdf}
 \end{center}
-\caption{%
+\caption[The period distribution of exoplanets]{%
 {\bf Real data}.
 The occurrence rate density as a function of logarithmic period integrated
 over bins in logarithmic radius.
@@ -1065,7 +1071,7 @@ turn over at periods around 50 days.
 \begin{center}
 \includegraphics{figures/exopop/results/radius.pdf}
 \end{center}
-\caption{%
+\caption[The radius distribution of exoplanets]{%
 {\bf Real data}.
 The occurrence rate density as a function of logarithmic radius integrated
 over bins in logarithmic period.
@@ -1080,7 +1086,8 @@ there are plausibly features near $R\sim3\,R_\oplus$ and $R\sim10\,R_\oplus$.
 \begin{center}
 \includegraphics{figures/exopop/results/linear-radius.pdf}
 \end{center}
-\caption{%
+\caption[The radius distribution of exoplanets plotted in terms of linear
+radius]{%
 {\bf Real data}.
 The same as \fig{radius} but presented as a density in radius instead of
 logarithmic radius.
@@ -1091,7 +1098,7 @@ logarithmic radius.
 \begin{center}
 \includegraphics[width=0.8\textwidth]{figures/exopop/results/rate.pdf}
 \end{center}
-\caption{%
+\caption[The rate of Earth analogs]{%
 The extrapolated rate density of Earth analogs \gammaearth\ (the same as
 \fig{smooth-rate} but applied to the catalog from \citealt{Petigura:2013}).
 The histogram is the MCMC estimate of our posterior constraint on this rate
@@ -1178,7 +1185,7 @@ rate.
 \begin{center}
 \includegraphics[width=\textwidth]{figures/exopop/comparison.pdf}
 \end{center}
-\caption{%
+\caption[Comparison to literature values for the rate of Earth analogs]{%
 Comparison of various estimates of \gammaearth.
 From the top, the first value is the number published by \citet{Petigura:2013} and
 converted to consistent units.
@@ -1385,25 +1392,7 @@ All of the code used in this project is available from
 This code (plus some dependencies) can be run to re-generate all of the
 figures and results in this \paper.
 
-\section{Chapter Acknowledgements}
-
-We would like to thank Erik Petigura (Berkeley) for freely sharing his data
-and code.
-It is a pleasure to thank
-Ruth Angus (Oxford),
-Tom Barclay (NASA Ames),
-Jo Bovy (IAS),
-Eric Ford (PSU),
-David Kipping (CfA),
-Ben Montet (Caltech/Harvard), and
-Scott Tremaine (IAS)
-for helpful contributions to the ideas and code presented here.
-We would also like to acknowledge the anonymous referee and the Scientific
-Editor, Eric Feigelson, for suggestions that
-substantially improved the paper.
-This research made use of the NASA \project{Astrophysics Data System}.
-
-\section{Chapter Appendix: Inverse-detection-efficiency}
+\section{Appendix: Inverse-detection-efficiency}
 \sectlabel{inv-det-eff}
 
 One huge benefit of the inverse-detection-efficiency procedure is its
@@ -1468,3 +1457,21 @@ we recommend that you always apply \eq{ml-ide} instead of the standard
 inverse-detection-efficiency procedure.
 As the uncertainties become more significant, there is no longer an analytic
 result and the method derived in this \paper\ is necessary.
+
+\section{Chapter Acknowledgements}
+
+We would like to thank Erik Petigura (Berkeley) for freely sharing his data
+and code.
+It is a pleasure to thank
+Ruth Angus (Oxford),
+Tom Barclay (NASA Ames),
+Jo Bovy (IAS),
+Eric Ford (PSU),
+David Kipping (CfA),
+Ben Montet (Caltech/Harvard), and
+Scott Tremaine (IAS)
+for helpful contributions to the ideas and code presented here.
+We would also like to acknowledge the anonymous referee and the Scientific
+Editor, Eric Feigelson, for suggestions that
+substantially improved the paper.
+This research made use of the NASA \project{Astrophysics Data System}.
