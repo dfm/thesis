@@ -22,8 +22,6 @@ Obserationally, this often manifests itself as measuring the occurrence rate
 of planets as a function of their physical parameters (orbital period, mass,
 radius, \etc) and correcting for selection effects and detection efficiency.
 
-
-
 {The population of exoplanets: RV catalogs, cuts to assume complete,
 power law models, Howard, Petigura, DFM, \etc}
 
@@ -46,9 +44,6 @@ power laws, uncertainties, \etc}
 
 {software, \etc}
 
-
-
-
 \chapname s~\chapalt{emcee} and~\chapalt{exopop} have both been refereed and
 published in the astronomical literature.
 \Chap{ketu} has been submitted to \emph{The Astrophysical Journal} and updated
@@ -59,12 +54,22 @@ Here, I describe my specific contributions to each \chapname:
 \begin{enumerate}
 
 {\item For \chap{emcee}, I generalized the algorithm proposed by
-\citet{Goodman:2010} through discussions with Jonathan Goodman and David Hogg.
-I implemented the algorithm with contributions from Dustin Lang and wrote the
-paper with some additions by David Hogg.}
+\citet{Goodman:2010} through discussions with Goodman and Hogg.
+I implemented the algorithm with contributions from Lang and wrote the paper
+with some additions by Hogg.}
 
 {\item For \chap{exopop}, I developed the project idea in collaboration with
-Hogg and Morton}
+Hogg and Morton.
+I then implemented the project and wrote the paper with contributions from
+Hogg.}
+
+{\item Of the published \chapname s, \chap{ketu} was the most collaborative.
+I developed the idea for the algorithm building on previous work with Hogg,
+Wang, and Sch\"olkopf.
+Using this algorithm, I wrote the code to search for transits in the
+\project{K2} Campagin 1 dataset and deployed it on the NYU HPC Butinah
+cluster\footnote{\url{http://nyuad.nyu.edu/en/research/infrastructure-and-support/nyuad-hpc.html}}.
+I wrote the majority of the paper with Sections contributed by Montet and
+Morton.}
 
 \end{enumerate}
-
