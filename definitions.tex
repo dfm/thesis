@@ -44,13 +44,16 @@
 \newcommand{\Fig}[1]{Figure~\figref{#1}}
 \newcommand{\fig}[1]{\Fig{#1}}
 \newcommand{\figlabel}[1]{\label{\chapid:fig:#1}}
+
 \newcommand{\Tab}[1]{Table~\ref{\chapid:tab:#1}}
 \newcommand{\tab}[1]{\Tab{#1}}
 \newcommand{\tablabel}[1]{\label{\chapid:tab:#1}}
+
 \newcommand{\Eq}[1]{Equation~(\ref{\chapid:eq:#1})}
 \newcommand{\eq}[1]{\Eq{#1}}
 \newcommand{\eqalt}[1]{Equation~\ref{\chapid:eq:#1}}
 \newcommand{\eqlabel}[1]{\label{\chapid:eq:#1}}
+
 \newcommand{\sectionname}{Section}
 \newcommand{\Sect}[1]{\sectionname~\ref{\chapid:sect:#1}}
 \newcommand{\sect}[1]{\Sect{#1}}
@@ -58,9 +61,18 @@
 \newcommand{\App}[1]{Appendix~\ref{\chapid:sect:#1}}
 \newcommand{\app}[1]{\App{#1}}
 \newcommand{\sectlabel}[1]{\label{\chapid:sect:#1}}
+
 \newcommand{\Algo}[1]{Algorithm~\ref{\chapid:algo:#1}}
 \newcommand{\algo}[1]{\Algo{#1}}
 \newcommand{\algolabel}[1]{\label{\chapid:algo:#1}}
+
+\newcommand{\chapname}{Chapter}
+\newcommand{\Chap}[1]{\chapname~\ref{chap:#1}}
+\newcommand{\chap}[1]{\Chap{#1}}
+\newcommand{\chapalt}[1]{\ref{chap:#1}}
+\newcommand{\chaplabel}[1]{\label{chap:#1}}
+
+\newcommand{\todo}[1]{{\color{red}\emph{todo}: #1}}
 
 % Math:
 \newcommand{\dd}{\mathrm{d}}

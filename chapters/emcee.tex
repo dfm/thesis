@@ -24,13 +24,13 @@
 \renewcommand{\vector}[1]{#1}
 \renewcommand{\matrix}[1]{#1}
 
-\chapter{\this: The MCMC Hammer\label{chap:emcee}}
+\chapter{\this: The MCMC Hammer\chaplabel{emcee}}
 
 This \paper\ is joint work with David~W.~Hogg (NYU), Jonathan~Goodman (NYU),
 and Dustin~Lang (Princeton/CMU) published in \emph{Publications of the
 Astronomical Society of the Pacific} as \citet{Foreman-Mackey:2013}.
 
-\section{Chapter Abstract}
+\section{Chapter abstract}
 
 We introduce a stable, well tested Python implementation of the affine-%
 invariant ensemble sampler for Markov chain Monte Carlo (MCMC)
@@ -162,7 +162,7 @@ algorithm from \citetalias{Goodman:2010} and the implementation
 decisions made in \this. We also describe the small changes
 that must be made to the algorithm to parallelize it.
 
-\section{The Algorithm}\sectlabel{algo}
+\section{The algorithm}\sectlabel{algo}
 
 A complete discussion of MCMC methods is beyond the scope of this \paper.
 Instead, the interested reader is directed to a classic reference like
@@ -464,7 +464,7 @@ algorithm \citepalias[described by][]{Goodman:2010} and implemented by those
 authors in
 C++.\footnote{\url{http://www.math.nyu.edu/faculty/goodman/software/acor}}
 
-\section{Discussion \& Tips}\sectlabel{advice}
+\section{Discussion \& tips}\sectlabel{advice}
 
 The goal of this project has been to make a sampler that is a useful
 tool for a large class of data analysis problems---a ``hammer'' if you
@@ -605,7 +605,7 @@ reparameterization, but in some cases, samplers like \this\ will not
 be useful, or might require clever or interesting improvements. The
 \this\ package is open-source software; please push us changes!
 
-\section{Chapter Acknowledgements}
+\section{Chapter acknowledgements}
 
 It is a pleasure to thank
 Eric Agol (UW),
@@ -624,4 +624,3 @@ Jeremy Sanders (Cambridge),
 Larry Widrow (Queen's), and
 Joe Zuntz (Oxford)
 for helpful contributions to the ideas and code presented here.
-\this\ makes use of the open-source Python \numpy\ package.
