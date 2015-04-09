@@ -292,7 +292,7 @@ targeted for nearly the full baseline instead of the original 100,000.
 \begin{center}
 \includegraphics{figures/peerless/predict.pdf}
 \end{center}
-\caption{%
+\caption[The expected number of single transit events]{%
 The expected number of single transit events---extrapolated from the
 \citet{Dong:2013} power-law model fit to the shorter period \kepler\
 candidates---as a function of the effective signal-to-noise threshold of the
@@ -529,9 +529,9 @@ impact parameter $b$ & --- & $b \sim U(0,\,1)$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-\caption{%
+\caption[Distribution of physical parameters used for simulated signals]{%
 The distribution of physical parameters for the injected signals.
-The limb darkening parameterization is given by \citet{Kipping:2013}.
+The limb darkening parameterization is given by \citet{Kipping:2013a}.
 \tablabel{params}}
 \end{table}
 
@@ -758,7 +758,7 @@ vetting techniques.}
 \begin{center}
 \includegraphics[width=0.5\textwidth]{figures/peerless/candidates.pdf}
 \end{center}
-\caption{%
+\caption[Light curves of reprensentative single transit candidates]{%
 Some representative light curve sections that were labeled as candidates by
 the single transit search.
 The light curve in the top-left panel is a convincing transit signal but the
@@ -794,11 +794,11 @@ stellar density and a prior on the eccentricity of the orbit.
 The photometrically derived physical properties for this star place it as a
 G-dwarf with a mass and radius of about 90~percent Solar \citep{Huber:2014}.
 Using these constraints and a beta function prior on the eccentricity of the
-orbit \citep{Kipping:2013a}, we run Markov Chain Monte Carlo
+orbit \citep{Kipping:2013}, we run Markov Chain Monte Carlo
 \citep{Foreman-Mackey:2013} to sample the posterior probability for the
 physical parameters of the system.
 In this analysis, we take limb darkening and the finite exposure time into
-account \citep{Mandel:2002, Kipping:2010, Kipping:2013}.
+account \citep{Mandel:2002, Kipping:2010, Kipping:2013a}.
 The results of this chain marginalized into the relevant physical dimensions
 are shown in \fig{corner}.
 The radius of the transiting body is measured to be $2.1 \pm
@@ -816,7 +816,8 @@ follow-up.
 \begin{center}
 \includegraphics[width=\textwidth]{figures/peerless/corner.pdf}
 \end{center}
-\caption{%
+\caption[Posterior constraints on the physical parameters of the transiting
+companion of KIC 10602068]{%
 Posterior constraints on the physical parameters of the body transiting KIC
 10602068 assuming a bound Keplerian orbit.
 \figlabel{corner}}

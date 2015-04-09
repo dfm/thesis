@@ -49,9 +49,10 @@
 \newcommand{\tab}[1]{\Tab{#1}}
 \newcommand{\tablabel}[1]{\label{\chapid:tab:#1}}
 
-\newcommand{\Eq}[1]{Equation~(\ref{\chapid:eq:#1})}
+\renewcommand{\eqref}[1]{\ref{\chapid:eq:#1}}
+\newcommand{\Eq}[1]{Equation~(\eqref{#1})}
 \newcommand{\eq}[1]{\Eq{#1}}
-\newcommand{\eqalt}[1]{Equation~\ref{\chapid:eq:#1}}
+\newcommand{\eqalt}[1]{Equation~\eqref{#1}}
 \newcommand{\eqlabel}[1]{\label{\chapid:eq:#1}}
 
 \newcommand{\sectionname}{Section}
