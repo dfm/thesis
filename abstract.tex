@@ -8,7 +8,8 @@ The deepest of these questions is: how common are planetary systems like our
 own Solar System?
 In this dissertation, I approach this question from several different angles
 and make inferences about the frequency and distribution of planets based on
-the large, publicly-available datasets from the \emph{Kepler} Mission.
+the large, publicly-available datasets from the \emph{Kepler} and \emph{K2}
+Missions.
 
 I develop two powerful and practical methods for mining for planetary transit
 signals in the hundreds of thousands of stellar light curves measured by
@@ -16,8 +17,8 @@ signals in the hundreds of thousands of stellar light curves measured by
 The first method is designed to find planets using the data from the
 \emph{K2} phase of the Mission where systematics introduced by the instrument
 dominate the measurements.
-Applying this method to the first publicly available dataset from \emph{K2},
-Campaign 1, I published more than thirty new exoplanet candidates.
+Applying this method to the first publicly available dataset from \emph{K2}, I
+published more than thirty new exoplanet candidates.
 The second transit search technique is designed to find transits of planets
 with orbital periods longer than the four year baseline of the \emph{Kepler}
 Mission.
@@ -38,3 +39,14 @@ Despite the fact that this catalog includes no true Earth analogs, I use the
 detected systems and weak smoothness assumptions about the underlying
 distribution to make a probabilistic estimate of the frequency of Earth-like
 planets.
+
+The main contributions of this dissertation are the development of methods for
+probabilistic and the release of open source implementations.
+One of these methods is \emph{emcee}, a method for Markov Chain Monte Carlo
+(MCMC) sampling of probability distributions.
+MCMC has been a popular method for approximate inference in astronomy for well
+over a decade but most implementations require extensive hand tuning in order
+to achieve acceptable performance on all but the simplest problems.
+Thanks to its affine-invariant sampling algorithm the \emph{emcee} method
+performs efficiently for many real problems in astronomy.
+The code has an active user base and online community of contributors.
