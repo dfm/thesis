@@ -26,8 +26,22 @@ to large planets on short orbits, the discoveries made in the \kepler\ dataset
 and careful characterization of the selection effects and search completeness
 have enabled detailed studies of the true underlying distribution of planets
 over a wide range in parameter space \citep[examples include][and
-\chap{exopop} of this dissertation]{Howard:2012, Petigura:2013,
-Foreman-Mackey:2014, Dressing:2015}.
+\chap{exopop}]{Howard:2012, Petigura:2013, Foreman-Mackey:2014,
+Dressing:2015}.
+The conclusions of these studies differ in detail but several overarching
+results are solid.
+The evidence suggests that every cool M-star has at least one planet in orbit
+\citep{Dressing:2013, Dressing:2015} and more than half of the other main
+sequence stars should have planetary systems \citep{Howard:2012, Fressin:2013,
+Petigura:2013, Foreman-Mackey:2014}.
+Of these planets, the most intrinsically common are in the ``super-Earth'' or
+``mini-Neptune'' range from about twice to four-times the radius of Earth.
+A combination of radial velocity follow-up and hierarchical inference methods
+indicate that most of these mini-Neptunes gaseous instead of rocky
+\citep{Weiss:2014, Rogers:2015} but since there are no planets like this in
+the Solar System, understanding them is crucial to our theories of planetary
+system formation.
+
 These observational studies of the population of exoplanets are arguably the
 ultimate goal of the \kepler\ Mission because it opens the door to direct
 comparison with theories of planet formation and evolution.
@@ -35,7 +49,7 @@ These results can be used as targets for numerical simulations of planetary
 systems or population level inferences can be combined with theoretical models
 to \citep{Wolfgang:2014, Rogers:2015}.
 
-One short-coming of the \kepler\ Mission was that it only targeted one field
+One shortcoming of the \kepler\ Mission was that it only targeted one field
 and in that frame, the main focus was on relatively faint F, G, and K dwarf
 stars.
 This target selection was chosen to enable the study of long-period planets
@@ -53,9 +67,8 @@ This means that it can target stars in different environments and focus on
 gathering the census of planets orbiting bright, nearby stars.
 It has been demonstrated that the data from \KT\ can reach precisions
 comparable to the original Mission and that it can be used to discover
-transiting exoplanets \citep[][and \chap{ketu} of this
-dissertation]{Vanderburg:2014, Vanderburg:2015, Crossfield:2015,
-Foreman-Mackey:2015}.
+transiting exoplanets \citep[][and \chap{ketu}]{Vanderburg:2014,
+Vanderburg:2015, Crossfield:2015, Foreman-Mackey:2015}.
 The discoveries made using \KT---and the upcoming \tess\ Mission---improve our
 knowledge of the population of exoplanets, especially those planets that orbit
 the cool M-stars that were not prioritized by the \kepler\ Mission.
@@ -63,44 +76,57 @@ These discoveries also present excellent targets for radial velocity follow-up
 and even spectroscopic observations of their atmospheres using the planned
 \project{James Webb Space Telescope}.
 
+The technical problem of searching for transits in the massive datasets
+produced by a time series mission like \kepler\ is a hard one.
+The relative change in brightness caused by the transit of planet in front of
+its host star is given by the area ratio between the planet and star
+\citep{Winn:2010}.
+Therefore, when an Earth-sized planet transits a Sun-like star, the amplitude
+of the signal is smaller than 100 parts-per-million.
+What's more, in the case of the Earth's orbit, this signal would only last for
+a little over half a day, once every year.
+Add to this the fact that most light curves are fraught with signals induced
+by stellar variability \citep{Basri:2013}, spot activity
+\citep{McQuillan:2014}, and instrumental effects \citep{Stumpe:2012,
+Smith:2012} with amplitudes far exceeding most transits.
+In order to find transits, we must, therefore, develop methods for efficiently
+and robustly mining large sets of light curves for tiny, sparse signals.
+Nearly all transit search algorithms rely on some sort of matched filter that
+is made insensitive to noise by pre-processing the light curves to remove the
+trends or by designing an estimator that is insensitive to these effects
+\citep[][]{Kovacs:2002, Kovacs:2005, Berta:2012, Petigura:2013,
+Foreman-Mackey:2015}.
 
-{Methods for detecting planets: RV, transits, direct detection,
-microlensing, \etc}
+Despite the attempts made to develop search algorithms that are robust to
+systematics and variability, all automated search results are completely
+dominated by false signals induced by poorly characterized noise in the light
+curves.
+In practice, automatic removal of these events has not been demonstrated to be
+sufficient---although the results are starting to look promising
+\citep{Jenkins:2014}---and all published catalogs of planet candidates are
+manually vetted.
+This means that the published list of candidates is \emph{chosen by a
+person---or group of people---going through the data by hand}.
+This method is not efficient or scalable so a substantial set of heuristic
+filtering is applied to the candidate list even before anyone looks at the
+light curves.
+One of the standard filters is to only consider candidates with at least three
+observed transits \citep[for example][]{Petigura:2013, Burke:2014, Rowe:2015}.
+This greatly restricts the range of parameter space that can be search.
+In particular, these methods will miss any planets on orbits longer than a
+fraction of the survey baseline.
 
-{Early discoveries: first planet, hot Jupiters, first transiting
-planets, \etc}
-
-{The beginning of \kepler: first discoveries, most interesting
-discoveries (most Earth-like, multis, \etc)}
-
-One major contribution of the \kepler\ Mission was that the large number of
-planet discoveries enabled statistical studies of the entire population of
-planets.
-Obserationally, this often manifests itself as measuring the occurrence rate
-of planets as a function of their physical parameters (orbital period, mass,
-radius, \etc) and correcting for selection effects and detection efficiency.
-
-{The population of exoplanets: RV catalogs, cuts to assume complete,
-power law models, Howard, Petigura, DFM, \etc}
-
-{The distribution of planets: rare hot Jupiters, common mini-Neptunes,
-Earths?, multis, inclination, \etc}
-
-{search-characterization-population inference}
-
-{methods for transit search: de-trending, filtering, \etc}
-
-{characterization: mandel \& agol, kipping, carter \& winn, GPs}
-
-{population: histograms, detection efficiency, likelihood function,
-power laws, uncertainties, \etc}
-
-{connections to planet formation, \etc}
-
-{my contributions: search (simultaneous fitting), characterization
-(GPs), population inference (hierarchical inference), \etc}
-
-{software, \etc}
+While transit surveys present the most effective means for systematic
+exoplanet characterization, their use is limited by existing transit search
+methodologies for planets with long orbital periods.
+In many cases, massive long-period planets dominate the dynamics of the
+planetary systems---like Jupiter in the Solar System---but their existence is
+completely missed by \kepler.
+This shortcoming becomes even more severe for \KT\ and \tess, transit surveys
+with shorter baselines.
+The final \chapname\ of this dissertation presents a novel and qualitatively
+unique method for transit search designed specifically to discover and
+quantify these important planets.
 
 \chapname s~\chapalt{emcee} and~\chapalt{exopop} have both been refereed and
 published in the astronomical literature.
