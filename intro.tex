@@ -1,4 +1,4 @@
-(
+\chapter*{Introduction}\addcontentsline{toc}{chapter}{Introduction}
 
 Over the past few years, the field of extrasolar planet (exoplanet) research
 has really taken off thanks, in large part, to the exquisite time series
@@ -124,36 +124,58 @@ planetary systems---like Jupiter in the Solar System---but their existence is
 completely missed by \kepler.
 This shortcoming becomes even more severe for \KT\ and \tess, transit surveys
 with shorter baselines.
-The final \chapname\ of this dissertation presents a novel and qualitatively
-unique method for transit search designed specifically to discover and
-quantify these important planets.
+The final \chapname\ of this dissertation presents a novel method for transit
+search designed specifically to discover and quantify these important planets.
+
+The study of exoplanets and their population has been driven by the public
+\kepler\ dataset and, in particular, by methods and software solutions
+developed by graduate students and young researchers around the world to
+squeeze all the available information out of the existing dataset.
+This dissertation presents methods developed with exactly these goals in mind.
+Each \chapname\ is accompanied by an open source implementation of the method
+and code to reproduce the results and figures.
+Of these projects, the most popular is the Markov Chain Monte Carlo
+implementation \project{emcee} \citep[][and
+\chap{emcee}]{Foreman-Mackey:2013}.
+With nearly 300 citations at the time of
+writing\footnote{\url{http://adsabs.harvard.edu/cgi-bin/nph-ref_query?bibcode=2013PASP..125..306F&amp;refs=CITATIONS&amp;db_key=AST}}
+and an active community on
+\project{GitHub}\footnote{\url{https://github.com/dfm/emcee}}, \project{emcee}
+has enabled many modest and ambitious probabilistic inferences across
+astrophysics.
 
 \chapname s~\chapalt{emcee} and~\chapalt{exopop} have both been refereed and
 published in the astronomical literature.
 \Chap{ketu} has been submitted to \emph{The Astrophysical Journal} and updated
 in response to the referee's comments.
+\Chap{peerless} is in preparation for submission to the refereed astrophysics
+literature.
 All of these \chapname s were co-authored with collaborators but the majority
 of the work and writing in each \chapname\ is mine.
 Here, I describe my specific contributions to each \chapname:
 \begin{enumerate}
 
 {\item For \chap{emcee}, I generalized the algorithm proposed by
-\citet{Goodman:2010} through discussions with Goodman and Hogg.
-I implemented the algorithm with contributions from Lang and wrote the paper
-with some additions by Hogg.}
+\citet{Goodman:2010} through discussions with Jonathan Goodman and David Hogg.
+I implemented the algorithm with contributions from Dustin Lang and wrote the
+paper with some additions by David Hogg.}
 
 {\item For \chap{exopop}, I developed the project idea in collaboration with
-Hogg and Morton.
+David Hogg and Timothy Morton.
 I then implemented the project and wrote the paper with contributions from
-Hogg.}
+David Hogg.}
 
 {\item Of the published \chapname s, \chap{ketu} was the most collaborative.
-I developed the idea for the algorithm building on previous work with Hogg,
-Wang, and Sch\"olkopf.
+I developed the idea for the algorithm building on previous work with David
+Hogg, Dun Wang, and Bernhard Sch\"olkopf.
 Using this algorithm, I wrote the code to search for transits in the
 \project{K2} Campagin 1 dataset and deployed it on the NYU HPC Butinah
 cluster\footnote{\url{http://nyuad.nyu.edu/en/research/infrastructure-and-support/nyuad-hpc.html}}.
-I wrote the majority of the paper with Sections contributed by Montet and
-Morton.}
+I wrote the majority of the paper with Sections contributed by Ben Montet and
+Timothy Morton.}
+
+{\item The fundamental ideas underlying \Chap{peerless} were developed through
+discussions with Bernhard Sch\"olkopf and David Hogg.
+The implementation is mine and I wrote the text.}
 
 \end{enumerate}
