@@ -1,11 +1,58 @@
 \chapter*{Conclusion}\addcontentsline{toc}{chapter}{Conclusion}
 
-In this dissertation, I study the population of exoplanets using data from
-NASA's \kepler\ Mission.
-I apply novel techniques to discover previously unknown planets and planet
-candidates.
-I also develop a robust probabilistic method for making inferences about the
-population of exoplanets based on catalogs of measurements.
+In this dissertation, we study the population of exoplanets using data from
+NASA's \kepler\ Mission and the re-purposed \KT\ Mission.
+We develop and apply novel techniques to discover previously unknown planets
+and planet candidates (\chapname s~\chapalt{ketu} and~\chapalt{peerless}).
+We present a robust probabilistic framework for making inferences about the
+population of exoplanets based on the noisy and incomplete catalogs derived
+from transit surveys (\chap{exopop}).
+The main contributions of this dissertation are methodological and each
+\chapname\ is accompanied by open source software implementing the methods.
+
+In the spirit of tool development and open source software, \Chap{emcee} is
+describes \project{emcee}, a general purpose Markov Chain Monte Carlo sampler
+that, since its release \citep{Foreman-Mackey:2013}, has become one of the
+most popular tools for probabilistic inference in astronomy.
+This method was originally proposed by \citet{Goodman:2010} and it was
+designed to sample problems efficiently with little tuning even when the
+parameter space is poorly conditioned.
+This feature is especially useful for problems in astronomy where the physical
+parameters often vary (and covary) over many orders of magnitude.
+The \project{emcee} implementation offers a small performance gain by deriving
+a parallelizable version of the original algorithm and a user-friendly and
+well documented Python interface.
+In practice, this method doesn't scale well to large numbers of dimensions
+($\gtrsim 50$) but it has been shown to work out-of-the-box on a large class
+of typical astronomy problems.
+
+In \Chap{exopop}, we derive a hierarchical method for inferring the population
+of exoplanets based on a catalog of planets with a non-trivial completeness
+function and large measurement uncertainties.
+This method builds on the importance sampling technique originally derived by
+\citet{Hogg:2010a} to make a histogram of noisy measurements.
 Applying this population inference method to a catalog of planet candidates
 transiting Sun-like stars \citep{Petigura:2013}, we make a prediction for the
 rate of Earth analogs.
+This prediction is substantially lower than earlier predictions based on the
+same catalog.
+We demonstrate that this discrepancy is caused by both the treatment of the
+observational uncertainties and the choice of extrapolation function.
+
+In Summer 2014, the \kepler\ spacecraft was re-purposed and it began taking
+data for the \KT\ Mission.
+The pointing accuracy in this mode is substantially degraded relative to the
+original Mission but, in \chap{ketu}, we demonstrate that these light curves
+can still be used to systematically search for transiting exoplanets.
+By building a flexible data-driven model for the systematic variability in the
+light curves of the stars and combining this with an approximate linear
+transit model, we derive a transit search algorithm where the systematics
+model is marginalized for every hypothesis.
+This enables the discovery of transit signals with amplitudes smaller than the
+pointing-induced variability.
+In \chap{ketu}, we announce the discovery of 36 planet candidates transiting
+33 stars.
+Of these candidates, 18 have been validated as bona fide planets and 6 have
+been identified as likely astrophysical false positives
+\citep{Crossfield:2015, Montet:2015, Armstrong:2015a}.
+
