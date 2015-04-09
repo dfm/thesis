@@ -56,3 +56,48 @@ Of these candidates, 18 have been validated as bona fide planets and 6 have
 been identified as likely astrophysical false positives
 \citep{Crossfield:2015, Montet:2015, Armstrong:2015a}.
 
+Finally, in \chap{peerless}, we present a novel method for detecting the
+transits planets with orbital periods longer than the baseline of
+observations.
+Existing transit search methods are blind to these long periods because it is
+technically difficult to distinguish a single transit from coincidental
+variability in light curves.
+This constraint is not acceptable for forthcoming surveys like \KT\ and \tess\
+where the observation baselines are shorter than the periods of the most
+important planets for studies of dynamics and habitability.
+We apply a supervised classification algorithm, implemented using a set of
+Random Forest classifiers trained on simulated transits, to predict the
+``class'' (\texttt{transit} or \texttt{no transit}) of every section of light
+curve.
+Using this method, we announce the discovery of a convincing single transit
+candidate with a radius of $\sim 2\,R_\mathrm{J}$.
+
+The ultimate goal of this research program is an improved understanding of the
+population of exoplanets at the currently uncharted extremes of parameter
+space, especially pushing to long periods.
+This dissertation represents a step in this direction but there are some
+conspicuously missing pieces in the methods presented in these pages.
+One major shortcoming is that neither \chap{ketu} or \chap{peerless} fully
+realized the dream of a fully automated search.
+In both projects, a final stage of manual vetting was required to reach the
+target precision.
+This is unacceptable if we want to make rigorous inferences of the population
+of planets because human components of a pipeline can't be stress-tested and
+characterized for consistency and performance.
+The main barrier to completely automated search is that we don't have an
+acceptable generative model for the signals that are mis-classified by the
+search algorithms and we can never be completely sure that any section of
+light curve \emph{does not have any transits}.
+This goal of fully automated transit discovery will become even more important
+as new datasets continue to roll in from \KT, \tess, and \plato.
+This should be a focus of large scale transit programs over the next years.
+
+
+
+
+
+
+
+
+
+
